@@ -1,0 +1,47 @@
+{% extends '@WebProfiler/Profiler/layout.html.twig' %}
+
+{% block toolbar %}
+    <style>
+        #response-executed-command {
+            overflow: visible;
+            white-space: pre;
+            font-size: 14px;
+            padding:10px;
+        }
+    </style>
+
+    <script>
+        function runCommand(formElement) {
+            var formData = new FormData(formElement);
+
+            fetch('//console-command.local/run-command', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then((response) => {
+                    document.querySelector('#response-executed-command').innerHTML = response;
+                    console.log(response);
+                });
+
+            return false;
+        }
+    </script>
+    <div class="sf-toolbar-block sf-toolbar-block-{{ name }} sf-toolbar-status-{{ status|default('normal') }} {{ additional_classes|default('') }}" {{ block_attrs|default('')|raw }}>
+        <form onsubmit="return runCommand(this);">
+            <input type="text" name="command" style="height: 100%;">
+            <button type="submit">Run</button>
+        </form>
+
+        <div class="sf-toolbar-info">
+            <div class="sf-toolbar-info-piece">
+                <b id="title-executed-command" class="sf-toolbar-ajax-info"></b>
+            </div>
+            <div class="sf-toolbar-info-piece">
+                <div id="response-executed-command">
+                    lalalallalallaalla
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
