@@ -9,13 +9,11 @@ use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\KernelInterface;
-use Symfony\Component\Routing\Annotation\Route;
 
 class CommandController extends Controller
 {
     /**
      * @param Request $request
-     * @Route(path="/run-command", name="run_command")
      *
      * @return Response
      * @throws \Exception

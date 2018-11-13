@@ -1,8 +1,9 @@
 {% extends '@WebProfiler/Profiler/layout.html.twig' %}
 
 {% block toolbar %}
+
     <style>
-        #response-executed-command {
+        #sf-toolbar-evozon-response-body {
             overflow: visible;
             white-space: pre;
             font-size: 14px;
@@ -14,32 +15,35 @@
         function runCommand(formElement) {
             var formData = new FormData(formElement);
 
-            fetch('//console-command.local/run-command', {
+            fetch('{{ path('_profiler_run_command') }}', {
                 method: 'POST',
                 body: formData
             })
                 .then(response => response.text())
                 .then((response) => {
-                    document.querySelector('#response-executed-command').innerHTML = response;
-                    console.log(response);
+                    document.querySelector('#sf-toolbar-evozon-response-title').innerHTML = './bin/console ' + formData.get('command');
+                    document.querySelector('#sf-toolbar-evozon-response-body').innerHTML = response;
                 });
 
             return false;
         }
     </script>
+
     <div class="sf-toolbar-block sf-toolbar-block-{{ name }} sf-toolbar-status-{{ status|default('normal') }} {{ additional_classes|default('') }}" {{ block_attrs|default('')|raw }}>
         <form onsubmit="return runCommand(this);">
-            <input type="text" name="command" style="height: 100%;">
+            <label>
+                <input type="text" name="command">
+            </label>
             <button type="submit">Run</button>
         </form>
 
         <div class="sf-toolbar-info">
             <div class="sf-toolbar-info-piece">
-                <b id="title-executed-command" class="sf-toolbar-ajax-info"></b>
+                <h3 id="sf-toolbar-evozon-response-title"></h3>
             </div>
             <div class="sf-toolbar-info-piece">
-                <div id="response-executed-command">
-                    lalalallalallaalla
+                <div id="sf-toolbar-evozon-response-body">
+                    The output of the command is shown here.
                 </div>
             </div>
         </div>

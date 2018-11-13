@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
 
-    <route id="_run_command" path="/run-command">
+    <route id="_profiler_run_command" path="/_evozon_profiler/run_command">
         <default key="_controller">App\Evozon\CmdWrapper\Controller\CommandController::runAction</default>
     </route>
 </routes>

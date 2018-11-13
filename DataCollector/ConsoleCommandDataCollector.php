@@ -8,21 +8,22 @@ use Symfony\Component\HttpKernel\DataCollector\DataCollector;
 
 class ConsoleCommandDataCollector extends DataCollector
 {
-
     /**
+     * No data collection needed.
+     *
      * {@inheritdoc}
      */
     public function collect(Request $request, Response $response, \Exception $exception = null)
     {
-        // none
     }
 
     /**
+     * No data reset needed.
+     *
      * {@inheritdoc}
      */
     public function reset()
     {
-        // none
     }
 
     /**
