@@ -6,8 +6,8 @@
 
     <services>
         <service
-                id="App\Evozon\CmdWrapper\Controller\CommandController"
-                class="App\Evozon\CmdWrapper\Controller\CommandController"
+                id="Evozon\Bundle\ProfilerCommandRunner\Controller\CommandController"
+                class="Evozon\Bundle\ProfilerCommandRunner\Controller\CommandController"
                 autoconfigure="true"
                 autowire="true">
         </service>

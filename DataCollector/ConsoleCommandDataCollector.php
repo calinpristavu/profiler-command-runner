@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Evozon\CmdWrapper\DataCollector;
+namespace Evozon\Bundle\ProfilerCommandRunner\DataCollector;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Evozon\CmdWrapper\DependencyInjection;
+namespace Evozon\Bundle\ProfilerCommandRunner\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
-class EvozonCmdWrapperExtension extends Extension
+class ProfilerCommandRunnerExtension extends Extension
 {
     /**
      * {@inheritdoc}

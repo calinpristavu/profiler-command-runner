@@ -1,0 +1,30 @@
+{
+    "name": "evozon/profiler-command-runner",
+    "type": "symfony-bundle",
+    "description": "Evozon ProfilerCommandRunner",
+    "keywords": [],
+    "homepage": "https://evozon.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Calin Pristavu",
+            "email": "calinpristavu@gmail.com"
+        },
+        {
+            "name": "Evozon Comunity",
+            "homepage": "https://evozon.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "symfony/web-profiler-bundle": "~3.4|~4.0",
+        "symfony/routing": "~3.4|~4.0"
+    },
+    "autoload": {
+        "psr-4": { "Evozon\\Bundle\\ProfilerCommandRunner\\": "" },
+        "exclude-from-classmap": [
+            "/Tests/"
+        ]
+    },
+    "minimum-stability": "dev"
+}

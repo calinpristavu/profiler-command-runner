@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Evozon\CmdWrapper\Controller;
+namespace Evozon\Bundle\ProfilerCommandRunner\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Bundle\FrameworkBundle\Console\Application;;
