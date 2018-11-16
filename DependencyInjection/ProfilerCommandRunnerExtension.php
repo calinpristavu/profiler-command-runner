@@ -18,7 +18,6 @@ class ProfilerCommandRunnerExtension extends Extension
     {
         $xmlReader = new XmlFileLoader($container, new FileLocator(\dirname(__DIR__).'/Resources/config'));
 
-        $xmlReader->load('collectors.xml');
         $xmlReader->load('services.xml');
     }
 }
