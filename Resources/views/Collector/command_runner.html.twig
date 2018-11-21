@@ -1,14 +1,8 @@
 {% extends '@WebProfiler/Profiler/layout.html.twig' %}
 
 {% block toolbar %}
-
     <style>
-        #sf-toolbar-evozon-response-body {
-            overflow: visible;
-            white-space: pre;
-            font-size: 14px;
-            padding:10px;
-        }
+        {{ include('@ProfilerCommandRunner/Collector/command_runner.css.twig') }}
     </style>
 
     <script>
@@ -21,8 +15,8 @@
             })
                 .then(response => response.text())
                 .then((response) => {
-                    document.querySelector('#sf-toolbar-evozon-response-title').innerHTML = './bin/console ' + formData.get('command');
-                    document.querySelector('#sf-toolbar-evozon-response-body').innerHTML = response;
+                    document.querySelector('#sf-toolbar-block-{{ name }}-response-title').innerHTML = './bin/console ' + formData.get('command');
+                    document.querySelector('#sf-toolbar-block-{{ name }}-response-body').innerHTML = response;
                 });
 
             return false;
@@ -39,11 +33,11 @@
 
         <div class="sf-toolbar-info">
             <div class="sf-toolbar-info-piece">
-                <h3 id="sf-toolbar-evozon-response-title"></h3>
+                <h3 id="sf-toolbar-block-{{ name }}-response-title"></h3>
             </div>
             <div class="sf-toolbar-info-piece">
-                <div id="sf-toolbar-evozon-response-body">
-                    The output of the command is shown here.
+                <div id="sf-toolbar-block-{{ name }}-response-body">
+                    <p>Type command in input below & hit [Run] to see server response.</p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,36 @@
+#sf-toolbar-block-{{ name }}-response-body {
+    overflow: visible;
+    white-space: pre;
+    font-size: 14px;
+    padding:10px;
+}
+
+.sf-toolbar-block-{{ name }} form {
+    position: relative;
+    top: 20%;
+}
+
+.sf-toolbar-block-{{ name }} form button {
+    padding: 3px 15px;
+    border: none;
+    margin-left: 3px;
+}
+
+.sf-toolbar-block-{{ name }} .sf-toolbar-info {
+    max-width: none !important;
+}
+
+.sf-toolbar-block-{{ name }} .sf-toolbar-info .sf-toolbar-info-piece {
+    max-width: 800px;
+}
+
+@-moz-document url-prefix() {
+    .sf-toolbar-block-{{ name }}  form {
+        position: relative;
+        top: 4%;
+    }
+
+    .sf-toolbar-block-{{ name }} form button {
+        padding: 5px 15px;
+    }
+}

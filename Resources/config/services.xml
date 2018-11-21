@@ -12,7 +12,7 @@
                 autowire="true">
         </service>
         <service id="data_collector.console_command" class="Evozon\Bundle\ProfilerCommandRunner\DataCollector\ConsoleCommandDataCollector">
-            <tag name="data_collector" id="console_command" template="@ProfilerCommandRunner/Collector/console_command.html.twig" priority="100" />
+            <tag name="data_collector" id="console_command" template="@ProfilerCommandRunner/Collector/command_runner.html.twig" priority="100" />
         </service>
     </services>
 </container>
