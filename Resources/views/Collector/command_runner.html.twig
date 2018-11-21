@@ -26,7 +26,7 @@
     <div class="sf-toolbar-block sf-toolbar-block-{{ name }} sf-toolbar-status-{{ status|default('normal') }} {{ additional_classes|default('') }}" {{ block_attrs|default('')|raw }}>
         <form onsubmit="return runCommand(this);">
             <label>
-                <input type="text" name="command">
+                <input type="text" name="command" placeholder="example: list --raw">
             </label>
             <button type="submit">Run</button>
         </form>

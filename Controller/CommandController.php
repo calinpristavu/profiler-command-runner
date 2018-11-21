@@ -24,10 +24,9 @@ class CommandController extends Controller
         $consoleApp = new Application($kernel);
         $consoleApp->setAutoExit(false);
 
-        $input = new StringInput($request->request->get('command'));
         $output = new BufferedOutput();
 
-        $consoleApp->run($input, $output);
+        $consoleApp->run(new StringInput($request->request->get('command')), $output);
 
         return new Response($output->fetch());
     }
