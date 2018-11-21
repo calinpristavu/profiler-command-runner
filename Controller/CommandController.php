@@ -3,7 +3,7 @@
 namespace Evozon\Bundle\ProfilerCommandRunner\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Bundle\FrameworkBundle\Console\Application;;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\StringInput;
 use Symfony\Component\Console\Output\BufferedOutput;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,7 +14,8 @@ class CommandController extends Controller
 {
     /**
      * @param Request $request
-     *
+     * @param KernelInterface $kernel
+
      * @return Response
      * @throws \Exception
      */

@@ -31,6 +31,6 @@ class ConsoleCommandDataCollector extends DataCollector
      */
     public function getName()
     {
-        return 'console_command';
+        return 'command_runner';
     }
 }
