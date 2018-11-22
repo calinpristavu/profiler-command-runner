@@ -1,12 +1,12 @@
 # CommandRunnerBundle
 
-This bundle allows users to run symfony console commands directly form the Web Profiler Toolbar.
+This bundle allows users to run symfony console commands directly from the Web Profiler Toolbar.
 
 In order to set up the Web Profiler toolbar, follow the [official symfony documentation](https://symfony.com/doc/current/profiler.html) for the package.
 
 This functionality has been thought of to be used in QA/Development environments only. 
 
-Its goal is to reduce the number of requests like "Can you please rerun the import on the QA server number 3?" thowards devs.
+Its goal is to reduce the number of requests like "Can you please rerun the import on the QA server number 3?" towards devs.
 It enables less technical individuals to run commands on the application instance they see, without needing to ssh into a server.
 # Installation
 ## Composer
